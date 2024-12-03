@@ -7,6 +7,7 @@ const dburi = mongodb+srv://netninja:<db_password>@nodetuts.e43nb.mongodb.net/?r
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
     mongoose.connect(dburi);
+    .then
     //set header content type
     res.setHeader('content-Type', 'text/html')
 
