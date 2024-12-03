@@ -1,11 +1,12 @@
 const http = require('http');
 const fs = require('fs');
+const mongoose = require('mongoose')
 
 const dburi = mongodb+srv://netninja:<db_password>@nodetuts.e43nb.mongodb.net/?retryWrites=true&w=majority&appName=NodeTuts
 
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
-
+    mongoose.connect(dburi);
     //set header content type
     res.setHeader('content-Type', 'text/html')
 
