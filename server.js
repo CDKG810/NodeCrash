@@ -1,6 +1,8 @@
 const http = require('http');
 const fs = require('fs');
 
+const dburi = mongodb+srv://netninja:<db_password>@nodetuts.e43nb.mongodb.net/?retryWrites=true&w=majority&appName=NodeTuts
+
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
 
